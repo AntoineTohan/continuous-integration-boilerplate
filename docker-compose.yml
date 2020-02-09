@@ -1,17 +1,6 @@
 version: "3"
 
 services:
-  portainer:
-    image: portainer/portainer
-    container_name: portainer
-    hostname: portainer
-    ports:
-      - 9001:9000
-      - 8000:8000
-    volumes:
-      - ./portainer:/data
-      - /var/run/docker.sock:/var/run/docker.sock
-
   jenkins:
     image: 'jenkins/jenkins:lts'
     container_name: jenkins
@@ -32,7 +21,7 @@ services:
     command:
     - --loglevel warning
     volumes:
-    - redis-data:/var/lib/redis:Z
+    - ./redis-data:/var/lib/redis:Z
 
   postgresql:
     restart: always
@@ -40,7 +29,7 @@ services:
       - net_integration
     image: sameersbn/postgresql:10-2
     volumes:
-    - postgresql-data:/var/lib/postgresql:Z
+    - ./postgresql-data:/var/lib/postgresql:Z
     environment:
     - DB_USER=gitlab
     - DB_PASS=password
@@ -59,7 +48,7 @@ services:
     - "10080:80"
     - "10022:22"
     volumes:
-    - gitlab-data:/home/git/data:Z
+    - ./gitlab-data:/home/git/data:Z
     environment:
     - DEBUG=false
 
