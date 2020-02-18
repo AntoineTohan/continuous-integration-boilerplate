@@ -63,7 +63,7 @@ Si vous ne pouvez pas installer le shell bash pour Windows installer et utiliser
 ![docker-v](images/docker-v.png)
 - Exécuter le tutoriel Docker Hello-World pour apprendre les commandes de bases de docker et vérifier l'installation```docker run hello-world```.
 
-**Pour Ubuntu Disco 19.04 / Cosmic 18.10 / Bionic 18.04 (LTS) / Xenial 16.04 (LTS) : **
+**Pour Ubuntu Disco 19.04 / Cosmic 18.10 / Bionic 18.04 (LTS) / Xenial 16.04 (LTS) :**
 
 METTRE EN PLACE LE DÉPÔT
 
@@ -106,7 +106,7 @@ Comment démarrer les services :
 Tout d'abord, vous devez cloner ce dépôt :
 ``` git clone https://github.com/AntoineTohan/continuous-integration-boilerplate.git```
 
-***Notez que vous devez installer git sur votre système : https://git-scm.com/ ***
+***Notez que vous devez installer git sur votre système : https://git-scm.com/***
 
 Naviguez avec votre terminal jusqu'au dossier :
 ``` cd continu-intégration-boilerplate```
@@ -232,7 +232,7 @@ Maintenant, tous les plugins nécessaires sont installés mais non configurés g
 - Appliquer et sauver les changements
 
  
-##  Garder la configuration mise en place
+##  Maintenir son environnement
 
 Si vous avez suive la totalité des étapes précédantes vous devriez avoir un server SonarQube, Jenkins et Gitlab fonctionnel. Avec cette architecture vos serais en mesure de pouvoir appeler des analyse Sonar depuis Jenkins et déclencher des builds Jenkins depuis une actions Gitlab (commit / PR etc ....). 
 
