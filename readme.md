@@ -249,7 +249,7 @@ Vous pouvez maintenant supprimer tous les services avec le Docker-compose :
 ***Attention la suppression vous fera perdre toute votre configuration***
 ``` docker-compose down```
 
-***Pour aller plus loin***
+ ## Pour aller plus loin
 
 - Afin d'automatiser les builds et les analyses SonarQube, vous pouvez créer des JenkinsFile & des fichiers de configuration SonarQube. 
 - Pour créer des JenkinsFile : https://jenkins.io/doc/pipeline/examples/
