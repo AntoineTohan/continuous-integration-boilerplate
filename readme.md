@@ -256,4 +256,11 @@ Vous pouvez maintenant supprimer tous les services avec le Docker-compose :
 - Pour créer des Sonar Properties : https://docs.sonarqube.org/latest/analysis/scan/sonarscanner/
 - Aussi, si vous ne souhaitez pas passer par Jenkins, Gitlab propose lui aussi un système d'intégration continiue : https://docs.gitlab.com/ee/ci/
 
+## Troubleshooting
+***Si vous rencontrez des problémes lors des installations des outils, vous pouvez vous référez aux GitHub/FAQ suivantes :***
 
+- Pour Docker : https://docs.docker.com/ | https://github.com/docker/for-mac | https://github.com/docker/for-win
+- Pour Gitlab : https://docs.gitlab.com/
+- Pour Jenkins : https://jenkins.io/doc/ | https://github.com/jenkinsci/jenkins
+- Pour SonarQube : https://docs.sonarqube.org/latest/ | https://github.com/SonarSource/sonarqube
+***Si ces liens ne vous aident pas, vous pouvez toujours ouvrir une "issue" sur ce Github et nous vous répondrons.***
