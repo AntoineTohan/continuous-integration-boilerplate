@@ -4,8 +4,8 @@
 
 ## I.	OBJECTIFS
 
-Avoir un environnement de CI opérationnel et quelques minutes et sans polluer son OS.
-Le but et de mettre en place via docker un outil de virtualisation 3 server en place sur votre machine : un serveur Jenkins , un serveur SonarQube et une serveur Gitlab. Avec cet environnement il vous seras facilement d’adapter la structure pour intégrer de la CI dans vos projets quelconque (NodeJs, Java).
+Avoir un environnement de CI opérationnel en quelques minutes et sans polluer son OS.
+Le but et de mettre en place via docker un outil de virtualisation de 3 serveur en place sur votre machine : un serveur Jenkins , un serveur SonarQube et un serveur Gitlab. Avec cet environnement il vous seras facile d’adapter la structure pour intégrer de la CI dans vos projets quelconques (NodeJs, Java).
 
 Le schéma de l’environnement que nous allons mettre en place : 
 
@@ -15,19 +15,19 @@ Le schéma de l’environnement que nous allons mettre en place :
 
 Pour installer Docker sur Windows, il faut obligatoirement Windows 10 professionnel, sinon il faudra télécharger Docker ToolBox.
 
-Pour l’installation de Docker ou Docker ToolBox il est nécessaire d’avoir accès à un terminal de ligne de commande type “shell bash Linux”.  Pour linux et Mac utiliser le terminal natif. Si vous êtes sur windows et qu’il ne l’embarque pas déjà suivez le guide suivant ou un équivalent : https://www.zebulon.fr/astuces/divers/executer-linux-sous-windows-10.html.
+Pour l’installation de Docker ou Docker ToolBox il est nécessaire d’avoir accès à un terminal de ligne de commande type “shell bash Linux”.  Pour linux et Mac, utiliser le terminal natif. Si vous êtes sur Windows et qu’il ne l’embarque pas déjà, suivez le guide suivant ou équivalent : https://www.zebulon.fr/astuces/divers/executer-linux-sous-windows-10.html.
 
-Si vous ne pouvez pas installer le shell bash pour Windows installer et utiliser le bash github : https://git-scm.com/download/win.
+Si vous ne pouvez pas installer le shell bash pour Windows, installer et utiliser le bash github : https://git-scm.com/download/win.
 
 **Windows 10 PRO :**
 - Ce rendre sur le site de Docker : https://www.docker.com/get-started
 - Cliquer sur le bouton “Download Desktop and Take a Tutorial”
-- Créer un compte docker
-- Télécharger l'exécutable pour windows 
+- Créer un compte Docker
+- Télécharger l'exécutable pour Windows 
 - Double-cliquez sur "Docker Desktop Installateur.exe" pour lancer l'installateur
 - Suivez l'assistant d'installation : acceptez la licence, autorisez l'installateur et procédez à l'installation
 - Cliquez sur "Close" pour terminer l'installation
-- Dans un nouveau terminal lancer ```docker -v``` si le terminal vous donne la version actuelle de docker alors l’installation est réussi
+- Dans un nouveau terminal lancer ```docker -v``` , si le terminal vous donne la version actuelle de docker alors l’installation est réussi
 
 ![docker-v](images/docker-v.png)
 
@@ -41,7 +41,7 @@ Si vous ne pouvez pas installer le shell bash pour Windows installer et utiliser
 - Une fois fini vous devriez avoir un nouveau programme “Docker QuickStart”
 - Exécuter “Docker QuickStart”
 - Un terminal s’ouvre, s’il demande un “User Account Control”, répondre par “Yes”
-- Quand l’initialisation est finit, le terminal affichera un “$”
+- Quand l’initialisation est terminée, le terminal affichera un “$”
 - Dans un nouveau terminal lancer ```docker -v``` si le terminal vous donne la version actuelle de docker alors l’installation est réussi
 
 ![docker-v](images/docker-v.png)
@@ -49,17 +49,17 @@ Si vous ne pouvez pas installer le shell bash pour Windows installer et utiliser
 
 **Pour MacOS:**
 - Ce rendre sur le Docker : https://docs.docker.com/docker-for-mac/install/ et cliquer sur “Download from Docker Hub”
-- Créer un compte docker
+- Créer un compte Docker
 - Exécuter le fichier “docker.dmg” 
-- Suivre l’installateur comme pour toute application Mac déplacer l'exécutable dans le folder “Application”
-- Une fois installer exécuter Docker
+- Suivre l’installateur comme pour toute application Mac, déplacer l'éxécutable dans le folder “Application”
+- Exécuter Docker Desktop
  ![mac-1](images/mac-1.png)
-- Une fois docker lancer vous devriez voir apparaître dans votre top bar 
+- Vous devriez voir apparaître l'icone de Docker dans la TopBar
 ![mac-2](images/mac-2.png)
-- Cliquer sur l’icone docker de la top bar
+- Cliquer sur l’icone docker de la TopBar
 ![mac-3](images/mac-3.png)
-- Une fenêtre vous affichera le statut d'installation de votre docker et aussi un formulaire pour vous connecter avec votre compte docker.
-- Dans un nouveau terminal lancer ```docker -v``` si le terminal vous donne la version actuelle de docker alors l’installation est réussi
+- Une fenêtre vous affichera le statut d'installation de votre docker et aussi un formulaire pour vous connecter avec votre compte Docker.
+- Dans un nouveau terminal lancer ```docker -v``` si le terminal vous donne la version actuelle de Docker, alors l’installation est réussi
 ![docker-v](images/docker-v.png)
 - Exécuter le tutoriel Docker Hello-World pour apprendre les commandes de bases de docker et vérifier l'installation```docker run hello-world```.
 
@@ -67,10 +67,10 @@ Si vous ne pouvez pas installer le shell bash pour Windows installer et utiliser
 
 METTRE EN PLACE LE DÉPÔT
 
-- Ouvrez un terminal natif est updater le packages : ```sudo apt-get update```
+- Ouvrez un terminal natif et updater les packages : ```sudo apt-get update```
 - Installer des paquets pour permettre à apt d'utiliser un référentiel sur HTTPS :
 ```sudo apt-get install apt-transport-https ca-certificates curl gnupg-agent  software-properties-common```
-- Ajoutez la clé GPG officielle de Docker :
+- Ajoutez la clé GPG officiel de Docker :
 ```curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -```
 - Vérifiez que vous avez maintenant la clé avec l'empreinte digitale 9DC8 5822 9FC7 DD38 854A E2D8 8D81 803C 0EBF CD88, en recherchant les 8 derniers caractères de l'empreinte digitale.
 ```sudo apt-key fingerprint 0EBFCD88```
@@ -79,7 +79,7 @@ METTRE EN PLACE LE DÉPÔT
 
 INSTALLER DOCKER ENGINE - COMMUNITY
 
-- Une fois le dépôt bien ajouter, lancer la commande : ```sudo apt-get update```
+- Une fois le dépôt bien ajouté, lancer la commande suivante : ```sudo apt-get update```
 - Installer la dernière version de Docker Engine - Community : ```sudo apt-get install docker-ce docker-ce-cli containerd.io```
 - Dans un nouveau terminal lancer ```docker -v``` si le terminal vous donne la version actuelle de docker alors l’installation est réussi
 ![docker-v](images/docker-v.png)
@@ -99,7 +99,7 @@ Cela devrait afficher :
 
 ## III.	PRÉPARER L’ENVIRONNEMENT 
 
-Nous allons démarrer 3 serveurs en même temps grâce à docker. Le serveur Jenkins, le serveur Gitlab et le serveur SonarQube. Or il faudra que ces trois serveurs puissent communiquer et échanger de données entre eux et avec votre ordinateur aussi. Ainsi pour des soucis de configuration future nous n’allons pas démarrer chaque service les uns après les autres mais exécuter un « docker-compose » qui va démarrer les 3 services en même temps avec la configuration nécessaire. 
+Nous allons démarrer 3 serveurs en même temps grâce à Docker. Le serveur Jenkins, le serveur Gitlab et le serveur SonarQube. Or il faudra que ces trois serveurs puissent communiquer et échanger de données entre eux et avec votre ordinateur aussi. Ainsi pour des soucis de configuration future nous n’allons pas démarrer chaque service les uns après les autres mais exécuter un « docker-compose » qui va démarrer les 3 services en même temps avec la configuration nécessaire. 
 
 Comment démarrer les services :
 
@@ -109,9 +109,9 @@ Tout d'abord, vous devez cloner ce dépôt :
 ***Notez que vous devez installer git sur votre système : https://git-scm.com/***
 
 Naviguez avec votre terminal jusqu'au dossier :
-``` cd continu-intégration-boilerplate```
+``` cd continuous-intégration-boilerplate```
 
-Vous pouvez maintenant commencer tous les services avec le Docker-compose :
+Vous pouvez maintenant lancer tous les services avec le Docker-compose :
 ``` docker-compose up -d```
 
 Documentation des compose file : https://docs.docker.com/compose/compose-file/
@@ -135,7 +135,7 @@ GitLab est un logiciel libre de forge basé sur git proposant les fonctionnalit�
 - Entrez un mot de passe pour le compte root
 - Vous pouvez maintenant vous connecter avec le nom d'utilisateur : root et votre mot de passe
 - Une fois connecté, vous devrez autoriser le GitLab à demander un réseau local afin de permettre la communication entre le GitLab et Jenkins
-- Aller aux paramètres (uniquement accessible avec le compte root)
+- Allez dans les paramètres (uniquement accessible avec le compte root)
 
 ![gitlab-1](images/gitlab-1.png)
 
@@ -144,16 +144,16 @@ GitLab est un logiciel libre de forge basé sur git proposant les fonctionnalit�
 - Dans le menu "Outbound requests" cochez les deux cases : 
 ![gitlab-2](images/gitlab-2.png)
 
-- Vous pouvez maintenant utiliser gitlab et créer les projets dont vous avez besoins.
+- Vous pouvez maintenant utiliser gitlab et créer les projets dont vous avez besoin.
 
 ## SonarQube configuration
 
 **Qu'est ce que SonarQube ?**
 
-SonarQube est un logiciel libre permettant de mesurer la qualité du code source en continu.
+SonarQube est un logiciel libre permettant de mesurer la qualité du code source en continue.
 
 
-- Accès à sonarqube à l'adresse : http://localhost:9000
+- Accès à SonarQube à l'adresse : http://localhost:9000
 
 - Cliquez sur "Login". Le nom d'utilisateur et le mot de passe par défaut sont ```admin```.
 
@@ -165,29 +165,29 @@ Cliquez sur "Administration" et "Marketplace" , et installer le plugin que vous 
 
 ***Dans l'exemple ci dessus on ajoute Java***
 
-- Example ajout de project Java (Maven ou Graddle) : 
+- Exemple d'ajout d'un projet Java (Maven ou Graddle) : 
 
 - Créer un nouveau projet, cliquer sur "Create new project": 
 ![sonar-2](images/sonar-2.png)
 
-- Nommer votre projet : 
+- Nommez votre projet : 
 ![sonar-3](images/sonar-3.png)
 
 - Gênerez un token, ajouter un nom et cliquer sur "Generate" : 
 
 ![sonar-4](images/sonar-4.png)
 
-- Sélectionner "Java" , puis "maven ou "graddle" selon votre project : 
+- Sélectionner "Java" , puis "Maven ou Graddle" selon votre projet : 
 ![sonar-6](images/sonar-6.png)
 
-- Copier bien la commande  donner par sonar pour linker votre project au sonar.
+- Copier bien la commande  donner par SonarQube pour linker votre projet au SonarQube.
 ![sonar-7](images/sonar-7.png)
 
-Il vous suffira ensuite d'aller à la racine de votre project Java avec un terminal et lancer la commande copier précédemment. Vous devriez avoir un message : 
+Il vous suffira ensuite d'aller à la racine de votre projet Java avec un terminal et de lancer la commande copiée précédemment. Vous devriez avoir un message : 
 
 ![sonar-8](images/sonar-8.png)
 
-***Pour lancer une analyse sonar dans votre rpoject il vous suffire de lancer la commande ```mvn sonar:sonar```à la racine du projet concerné.***
+***Pour lancer une analyse SonarQube dans votre projet il vous suffira de lancer la commande ```mvn sonar:sonar```à la racine du projet concerné.***
 
 ## Jenkins configuration
 
@@ -195,7 +195,7 @@ Il vous suffira ensuite d'aller à la racine de votre project Java avec un termi
 **Qu'est ce que jenkins ?**
 
 Jenkins est un outil d'intégration continue open source écrit en Java. Le projet a été conçu à partir de Hudson après un conflit avec Oracle.
-Jenkins fournit des services d'intégration continue pour le développement de logiciels. Il s’agit d’un système serveur fonctionnant dans un conteneur de servlet tel que Apache Tomcat.
+Jenkins fournit des services d'intégration continue pour le développement de logiciels. Il s’agit d’un système serveur fonctionnant dans un conteneur de servlet tel qu'Apache Tomcat.
 
 
 - Accèder à  Jenkins à l'adresse suivante : http://localhost:8080
@@ -221,20 +221,20 @@ Jenkins fournit des services d'intégration continue pour le développement de l
 - Ensuite cliquer sur "Restart Jenkins when installation is complete and no jobs are running"
 
 
-Maintenant, tous les plugins nécessaires sont installés mais non configurés gitlab et sonar.
+Maintenant, tous les plugins nécessaires sont installés mais ils ne sont pas configurés pour Gitlab et SonarQube.
 
 - Une fois que Jenkins est redémarré, allez à "Manage Jenkins", puis "Configure System"
-- Allez dans la partie "SonarQube servers", cliquez sur "Add SonarQube" et ensuite, cochez "Enable injection of SonarQube server configuration...", donnez un nom  au sonar et définissez l'url du serveur sonar : http://sonar:9000
+- Allez dans la section "SonarQube servers", cliquez sur "Add SonarQube" et ensuite, cochez "Enable injection of SonarQube server configuration...", donnez un nom au SonarQube et définissez l'url du serveur SonarQube : http://sonar:9000
 
 
 
-***Laisser le  plugin de Gitlab par défaut si vous réaliser de la CI non avancée***
-- Appliquer et sauver les changements
+***Laissez le plugin de Gitlab par défaut si vous réaliser de la CI non avancée***
+- Appliquez et sauvez les changements
 
  
 ##  Maintenir son environnement
 
-Si vous avez suive la totalité des étapes précédantes vous devriez avoir un server SonarQube, Jenkins et Gitlab fonctionnel. Avec cette architecture vos serais en mesure de pouvoir appeler des analyse Sonar depuis Jenkins et déclencher des builds Jenkins depuis une actions Gitlab (commit / PR etc ....). 
+Si vous avez suive la totalité des étapes précédantes vous devriez avoir un server SonarQube, Jenkins et Gitlab fonctionnel. Avec cette architecture vos serais en mesure de pouvoir appeler des analyse SonarQube depuis Jenkins et déclencher des builds Jenkins depuis une actions Gitlab (commit / PR etc ....). 
 
 
 Pour terminer quelques commandes afin de mettre en pause / supprimer tous l'environnement d'intégration continue mis en place.
@@ -249,5 +249,11 @@ Vous pouvez maintenant supprimer tous les services avec le Docker-compose :
 ***Attention la suppression vous fera perdre toute votre configuration***
 ``` docker-compose down```
 
+***Pour aller plus loin***
+
+- Afin d'automatiser les builds et les analyses SonarQube, vous pouvez créer des JenkinsFile & des fichiers de configuration SonarQube. 
+- Pour créer des JenkinsFile : https://jenkins.io/doc/pipeline/examples/
+- Pour créer des Sonar Properties : https://docs.sonarqube.org/latest/analysis/scan/sonarscanner/
+- Aussi, si vous ne souhaitez pas passer par Jenkins, Gitlab propose lui aussi un système de builds et d'archivage : https://docs.gitlab.com/ee/ci/
 
 
