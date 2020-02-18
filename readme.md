@@ -263,4 +263,5 @@ Vous pouvez maintenant supprimer tous les services avec le Docker-compose :
 - Pour Gitlab : https://docs.gitlab.com/
 - Pour Jenkins : https://jenkins.io/doc/ | https://github.com/jenkinsci/jenkins
 - Pour SonarQube : https://docs.sonarqube.org/latest/ | https://github.com/SonarSource/sonarqube
+
 ***Si ces liens ne vous aident pas, vous pouvez toujours ouvrir une "issue" sur ce Github et nous vous répondrons.***
