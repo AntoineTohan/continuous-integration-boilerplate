@@ -254,6 +254,6 @@ Vous pouvez maintenant supprimer tous les services avec le Docker-compose :
 - Afin d'automatiser les builds et les analyses SonarQube, vous pouvez créer des JenkinsFile & des fichiers de configuration SonarQube. 
 - Pour créer des JenkinsFile : https://jenkins.io/doc/pipeline/examples/
 - Pour créer des Sonar Properties : https://docs.sonarqube.org/latest/analysis/scan/sonarscanner/
-- Aussi, si vous ne souhaitez pas passer par Jenkins, Gitlab propose lui aussi un système de builds et d'archivage : https://docs.gitlab.com/ee/ci/
+- Aussi, si vous ne souhaitez pas passer par Jenkins, Gitlab propose lui aussi un système d'intégration continiue : https://docs.gitlab.com/ee/ci/
 
 
