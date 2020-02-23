@@ -208,7 +208,7 @@ Jenkins fournit des services d'intégration continue pour le développement de l
   - Directement dans votre explorateur de fichiers :
     - Allez à la racine du projet -> jenkins -> secrets -> initialAdminPassword
     ![jenkins-1](images/jenkins-1.png)
-- Ensuite, cliquez sur Installer les plugins proposés et attendez la fin du processus
+- Ensuite, cliquez sur "Installer les plugins suggérés" et attendez la fin du processus
 - Vous pouvez maintenant créer votre compte d'administration et cliquer sur "Save and Continue
 - Laissez ensuite l'URL Jenkins suggérée et cliquez sur "Save and Finish". Pour permettre à Jenkins de communiquer avec GitLab et SonarQube, nous devons installer quelques plugins.
 - Cliquez sur "Manage Jenkins" et ensuite sur "Manage Plugin"
