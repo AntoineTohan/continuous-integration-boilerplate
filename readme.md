@@ -140,7 +140,7 @@ Liste des containers créée :
 
 **Qu'est ce que Gitlab ?**
 
-GitLab est un logiciel libre de forge basé sur git proposant les fonctionnalités de wiki, un système de suivi des bugs, l’intégration continue et la livraison continue. 
+GitLab est un logiciel libre de forge basé sur git proposant les fonctionnalités de wiki, un système de suivi des bugs, l’intégration continue et la livraison continue.
 
 
 - Accès à l'interface web de gitlab à l'adresse suivante : http://localhost:8081
@@ -235,23 +235,33 @@ Jenkins fournit des services d'intégration continue pour le développement de l
 - Ensuite cliquer sur "**Restart Jenkins when installation is complete and no jobs are running**"
 - Attendez le redémarrage de Jenkins
 
-IMAGE ICI
-
 - Allez dans SonarQube (disponible à l'adresse suivante : localhost:9000)
 - Cliquez sur votre profil en haut à droite, puis "**My Account**"
+
+![sonar-account](images/sonar-account.png)
+
 - Cliquez dans la section "**Security**"
 - Ajouter un nouveau Token et copier la clé secrète fournie par SonarQube
 - Retournez sur Jenkins
 - Pour la configuration de SonarQube allez dans "**Administrer Jenkins**" puis "**Configurer le système**"
 - Ajouter un serveur SonarQube avec la configuration suivante : 
+
+![sonar-scanner-conf](images/sonar-scanner-conf.png)
+
   - **Nom** : sonar-scanner
   - **URL du serveur** : http://sonarqube:9000/
   - Cliquez sur le bouton "**Ajouter**" du champ "**Server authentification token**"
+
+  ![jenkins-add-sonar-token](images/jenkins-add-sonar-token.png)
+
   - Ouvrez le champ "**Type**" et sélectionner "**Secret Text**"
   - Dans le champ "**Secret**", entrez la clé secrète SonarQube précédemment copiée
   - Dans le champ "**ID**", rentrez "**sonar-scanner-token**"
   -  Laissez le champ "**Description**" vide
   - Cliquez sur le bouton "**Ajouter**"
+
+![jenkins-token](images/sonar-tokenpng.png)
+
   - Maintenant, sélectionner dans "**Server Authentification Token**" le token précédemment crée
 
 - Rendez-vous dans l'espace suivant : "**Administrer Jenkins** --> **Configuration globale des outils**"
@@ -259,6 +269,8 @@ IMAGE ICI
   - Dans le champ "**Name**", écrire : "**sonar-scanner**"
   - Cochez "**Install Automatically**"
   - Cliquez sur "**Ajouter SonarQube Scanner**"
+
+![sonar-scanner-jekins-outils](images/sonar-scanner-jekins-outils.png)
 
 L'installation et la configuration du SonarQube plugin est désormais terminée.
 
@@ -271,6 +283,8 @@ L'installation et la configuration du SonarQube plugin est désormais terminée.
 - Dans la section "**Maven**" cocher **"Install Automatically**"
 - Sélectionner "**Download from Docker.com**"
 - Enregistrez et appliquez les changements
+
+![maven](images/maven.png)
 
 Maven est désormais installé et ne nécessite pas plus de configuration
  
