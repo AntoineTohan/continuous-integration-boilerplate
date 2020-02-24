@@ -2,7 +2,7 @@
 
 ***Rédiger par DURAND Antoine, THOMAS Hugo, JAMMES Yannick et SACHE Mickael.***
 
-## SOMMAIRE 
+## SOMMAIRE
 
 + [Objectifs](#objectifs)
 + [Installer Docker](#installer-docker)
@@ -44,7 +44,7 @@ Si vous ne pouvez pas installer le shell bash pour Windows, installer et utilise
 
 ![docker-v](images/docker-v.png)
 
- - Vous pouvez maintenant lancer Docker Desktop en le recherchant dans la barre de recherche de Windows et en cliquant dessus
+- Vous pouvez maintenant lancer Docker Desktop en le recherchant dans la barre de recherche de Windows et en cliquant dessus
 - Exécuter le tutoriel Docker Hello-World pour apprendre les commandes de bases de docker et vérifier l'installation ```docker run hello-world ```.
 
 **Pour Windows 10 (Standard, Famille..) ou < 10 :**
@@ -142,7 +142,6 @@ Liste des containers créée :
 
 GitLab est un logiciel libre de forge basé sur git proposant les fonctionnalités de wiki, un système de suivi des bugs, l’intégration continue et la livraison continue.
 
-
 - Accès à l'interface web de gitlab à l'adresse suivante : http://localhost:8081
 
 - Entrez un mot de passe pour le compte root
@@ -164,7 +163,6 @@ GitLab est un logiciel libre de forge basé sur git proposant les fonctionnalit�
 **Qu'est ce que SonarQube ?**
 
 SonarQube est un logiciel libre permettant de mesurer la qualité du code source en continue.
-
 
 - Accès à SonarQube à l'adresse : http://localhost:9000
 
@@ -203,7 +201,6 @@ Il vous suffira ensuite d'aller à la racine de votre projet Java avec un termin
 ***Pour lancer une analyse SonarQube dans votre projet il vous suffira de lancer la commande ```mvn sonar:sonar```à la racine du projet concerné.***
 
 ## Jenkins configuration
-
 
 **Qu'est ce que jenkins ?**
 
@@ -252,7 +249,7 @@ Jenkins fournit des services d'intégration continue pour le développement de l
   - **URL du serveur** : http://sonarqube:9000/
   - Cliquez sur le bouton "**Ajouter**" du champ "**Server authentification token**"
 
-  ![jenkins-add-sonar-token](images/jenkins-add-sonar-token.png)
+![jenkins-add-sonar-token](images/jenkins-add-sonar-token.png)
 
   - Ouvrez le champ "**Type**" et sélectionner "**Secret Text**"
   - Dans le champ "**Secret**", entrez la clé secrète SonarQube précédemment copiée
@@ -323,17 +320,22 @@ sonar.java.coveragePlugin=jacoco
 
 Votre build est maintenant configuré.
 
-Voici la liste des étapes de votre build : 
+Si vous le lancer vous devriez avoir :
+
+![jenkins-jobs-finish](images/jenkins-jobs-finish.png)
+
+Voici la liste des étapes de votre jobs jenkins :
 - Maven Build
 - Maven TestUI
 - Génération des rapports de test
 - Génération des artefacts JAR
-- Analyse du code SonarQube 
- 
+- Analyse du code SonarQube
+
+Les commandes Build, Test et la génération des tests et artifacts et géré par le plugin "Maven Integration plugin".
+
 ##  Maintenir son environnement
 
 Si vous avez suive la totalité des étapes précédantes vous devriez avoir un server SonarQube, Jenkins et Gitlab fonctionnel. Avec cette architecture vos serais en mesure de pouvoir appeler des analyse SonarQube depuis Jenkins et déclencher des builds Jenkins depuis une actions Gitlab (commit / PR etc ....). 
-
 
 Pour terminer quelques commandes afin de mettre en pause / supprimer tous l'environnement d'intégration continue mis en place.
 
