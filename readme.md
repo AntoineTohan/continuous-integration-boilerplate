@@ -226,9 +226,8 @@ Maintenant, tous les plugins nécessaires sont installés mais ils ne sont pas c
 - Une fois que Jenkins est redémarré, allez à "Manage Jenkins", puis "Configure System"
 - Allez dans la section "SonarQube servers", cliquez sur "Add SonarQube" et ensuite, cochez "Enable injection of SonarQube server configuration...", donnez un nom au SonarQube et définissez l'url du serveur SonarQube : http://sonar:9000
 
+- Pour le plugin Gitlab, si vous réalisez une CI classique, vous n'aurez pas besoin de le configurer, sinon vous pouvez retrouver de l'aide ici : https://docs.gitlab.com/ee/integration/jenkins.html
 
-
-***Laissez le plugin de Gitlab par défaut si vous réaliser de la CI non avancée***
 - Appliquez et sauvez les changements
 
  
