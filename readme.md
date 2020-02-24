@@ -5,7 +5,15 @@
 ## SOMMAIRE 
 
 + [Objectifs](#objectifs)
-+ [Installer Dokcer](#installer-docker)
++ [Installer Docker](#installer-docker)
++ [Préparer l'environnement](#préparer-l'environnement)
++ [GitLab configuration](#gitlab-configuration)
++ [SonarQube configuration](#SonarQube-configuration)
++ [Jenkins configuration](#Jenkins-configuration)
++ [Ajouter une application Java à Jenkins](#Ajouter-une-application-Java-à-Jenkins)
++ [Maintenir son environnement](#Maintenir-son-environnement)
++ [Pour aller plus loin](#Pour-aller-plus-loin)
++ [Troubleshooting](#Troubleshooting)
 
 ## OBJECTIFS
 
@@ -16,7 +24,7 @@ Le schéma de l’environnement que nous allons mettre en place :
 
 ![archi](images/archi.png)
 
-## INSTALLER DOCKER   
+## INSTALLER DOCKER
 
 Pour installer Docker sur Windows, il faut obligatoirement Windows 10 professionnel, sinon il faudra télécharger Docker ToolBox.
 
@@ -102,7 +110,7 @@ Cela devrait afficher :
 ![docker-compose-v](images/docker-compose-v.png)
 
 
-## III.	PRÉPARER L’ENVIRONNEMENT 
+## PRÉPARER L’ENVIRONNEMENT
 
 Nous allons démarrer 3 serveurs en même temps grâce à Docker. Le serveur Jenkins, le serveur Gitlab et le serveur SonarQube. Or il faudra que ces trois serveurs puissent communiquer et échanger de données entre eux et avec votre ordinateur aussi. Ainsi pour des soucis de configuration future nous n’allons pas démarrer chaque service les uns après les autres mais exécuter un « docker-compose » qui va démarrer les 3 services en même temps avec la configuration nécessaire. 
 
@@ -325,7 +333,7 @@ Vous pouvez maintenant supprimer tous les services avec le Docker-compose :
 ***Attention la suppression vous fera perdre toute votre configuration***
 ``` docker-compose down```
 
- ## Pour aller plus loin
+## Pour aller plus loin
 
 - Afin d'automatiser les builds et les analyses SonarQube, vous pouvez créer des JenkinsFile & des fichiers de configuration SonarQube. 
 - Pour créer des JenkinsFile : https://jenkins.io/doc/pipeline/examples/
