@@ -7,7 +7,7 @@
 + [Objectifs](#objectifs)
 + [Installer Dokcer](#installer-docker)
 
-## I.	OBJECTIFS
+## OBJECTIFS
 
 Avoir un environnement de CI opérationnel en quelques minutes et sans polluer son OS.
 Le but et de mettre en place via docker un outil de virtualisation de 3 serveur en place sur votre machine : un serveur Jenkins , un serveur SonarQube et un serveur Gitlab. Avec cet environnement il vous seras facile d’adapter la structure pour intégrer de la CI dans vos projets quelconques (NodeJs, Java).
@@ -16,7 +16,7 @@ Le schéma de l’environnement que nous allons mettre en place :
 
 ![archi](images/archi.png)
 
-## II.	INSTALLER DOCKER   
+## INSTALLER DOCKER   
 
 Pour installer Docker sur Windows, il faut obligatoirement Windows 10 professionnel, sinon il faudra télécharger Docker ToolBox.
 
