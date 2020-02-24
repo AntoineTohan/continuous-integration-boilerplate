@@ -159,7 +159,7 @@ SonarQube est un logiciel libre permettant de mesurer la qualité du code source
 
 - Par défaut, SonarQube ne peut analyser aucun code source car aucun plugin n'est installé. Il faut donc installer les plugins adaptés.
 
-Cliquez sur "Administration" et "Marketplace" , et installer le plugin que vous voulez :
+Cliquez sur "Administration" et "Marketplace" , et installer le plugin "SonarJAVA" :
 
 ![sonar-1](images/sonar-1.png)
 
