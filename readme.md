@@ -265,7 +265,6 @@ Jenkins fournit des services d'intégration continue pour le développement de l
   - Dans la catégorie "**SonarQube Scanner**" cliquez sur "**Ajouter SonarQube Scanner**"
   - Dans le champ "**Name**", écrire : "**sonar-scanner**"
   - Cochez "**Install Automatically**"
-  - Cliquez sur "**Ajouter SonarQube Scanner**"
 
 ![sonar-scanner-jekins-outils](images/sonar-scanner-jekins-outils.png)
 
