@@ -2,6 +2,11 @@
 
 ***Rédiger par DURAND Antoine, THOMAS Hugo, JAMMES Yannick et SACHE Mickael.***
 
+## SOMMAIRE 
+
++ [Objectifs](#objectifs)
++ [Installer Dokcer](#installer-docker)
+
 ## I.	OBJECTIFS
 
 Avoir un environnement de CI opérationnel en quelques minutes et sans polluer son OS.
