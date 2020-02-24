@@ -230,6 +230,13 @@ Maintenant, tous les plugins nécessaires sont installés mais ils ne sont pas c
 
 - Appliquez et sauvez les changements
 
+- Maintenant, nous allons configurer Maven pour qu'il soit automatiquement installé sur le Docker Jenkins
+
+- Allez dans "Administrer Jenkins" puis "Configuration globale des outils"
+- Dans la section "Maven" cocher "Install Automatically"
+- Sélectionner "Download from Docker.com"
+- Enregistrez et appliquez les changements
+
  
 ##  Maintenir son environnement
 
