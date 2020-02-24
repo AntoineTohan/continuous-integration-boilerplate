@@ -21,12 +21,12 @@ Si vous ne pouvez pas installer le shell bash pour Windows, installer et utilise
 
 **Windows 10 PRO :**
 - Ce rendre sur le site de Docker : https://www.docker.com/get-started
-- Cliquer sur le bouton “Download Desktop and Take a Tutorial”
+- Cliquer sur le bouton “**Download Desktop and Take a Tutorial**”
 - Créer un compte Docker
 - Télécharger l'exécutable pour Windows 
-- Double-cliquez sur "Docker Desktop Installateur.exe" pour lancer l'installateur
+- Double-cliquez sur **"Docker Desktop Installateur.exe**" pour lancer l'installateur
 - Suivez l'assistant d'installation : acceptez la licence, autorisez l'installateur et procédez à l'installation
-- Cliquez sur "Close" pour terminer l'installation
+- Cliquez sur "**Close**" pour terminer l'installation
 - Dans un nouveau terminal lancer ```docker -v``` , si le terminal vous donne la version actuelle de docker alors l’installation est réussi
 
 ![docker-v](images/docker-v.png)
@@ -36,11 +36,11 @@ Si vous ne pouvez pas installer le shell bash pour Windows, installer et utilise
 
 **Pour Windows 10 (Standard, Famille..) ou < 10 :**
 - Ce rendre sur le GitHub Docker ToolBox : https://github.com/docker/toolbox/releases
-- Télécharger le dernier exécutable stable disponible (“DockerToolbox-XX.XX.X.exe”)
+- Télécharger le dernier exécutable stable disponible (“**DockerToolbox-XX.XX.X.exe**”)
 - Suivre les instructions d’installations du launcher
-- Une fois fini vous devriez avoir un nouveau programme “Docker QuickStart”
-- Exécuter “Docker QuickStart”
-- Un terminal s’ouvre, s’il demande un “User Account Control”, répondre par “Yes”
+- Une fois fini vous devriez avoir un nouveau programme “**Docker QuickStart**”
+- Exécuter “**Docker QuickStart**”
+- Un terminal s’ouvre, s’il demande un “**User Account Control**”, répondre par “**Yes**”
 - Quand l’initialisation est terminée, le terminal affichera un “$”
 - Dans un nouveau terminal lancer ```docker -v``` si le terminal vous donne la version actuelle de docker alors l’installation est réussi
 
@@ -48,10 +48,10 @@ Si vous ne pouvez pas installer le shell bash pour Windows, installer et utilise
 - Exécuter le tutoriel Docker Hello-World pour apprendre les commandes de bases de docker et vérifier l'installation.```docker run hello-world``` 
 
 **Pour MacOS:**
-- Ce rendre sur le Docker : https://docs.docker.com/docker-for-mac/install/ et cliquer sur “Download from Docker Hub”
+- Ce rendre sur le Docker : https://docs.docker.com/docker-for-mac/install/ et cliquer sur “**Download from Docker Hub**”
 - Créer un compte Docker
-- Exécuter le fichier “docker.dmg” 
-- Suivre l’installateur comme pour toute application Mac, déplacer l'éxécutable dans le folder “Application”
+- Exécuter le fichier “**docker.dmg**” 
+- Suivre l’installateur comme pour toute application Mac, déplacer l'éxécutable dans le dossier “**Application**”
 - Exécuter Docker Desktop
  ![mac-1](images/mac-1.png)
 - Vous devriez voir apparaître l'icone de Docker dans la TopBar
@@ -139,12 +139,12 @@ GitLab est un logiciel libre de forge basé sur git proposant les fonctionnalit�
 
 ![gitlab-1](images/gitlab-1.png)
 
-- Allez ensuite dans la barre latérale gauche  "Settings -> Networks"
+- Allez ensuite dans la barre latérale gauche  "**Settings** -> **Networks**"
 
-- Dans le menu "Outbound requests" cochez les deux cases : 
+- Dans le menu "**Outbound requests**" cochez les deux cases : 
 ![gitlab-2](images/gitlab-2.png)
 
-- Vous pouvez maintenant utiliser gitlab et créer les projets dont vous avez besoin.
+- Vous pouvez maintenant utiliser Gitlab et créer les projets dont vous avez besoin.
 
 ## SonarQube configuration
 
@@ -155,11 +155,11 @@ SonarQube est un logiciel libre permettant de mesurer la qualité du code source
 
 - Accès à SonarQube à l'adresse : http://localhost:9000
 
-- Cliquez sur "Login". Le nom d'utilisateur et le mot de passe par défaut sont ```admin```.
+- Cliquez sur "**Login**". Le nom d'utilisateur et le mot de passe par défaut sont ```admin```.
 
 - Par défaut, SonarQube ne peut analyser aucun code source car aucun plugin n'est installé. Il faut donc installer les plugins adaptés.
 
-Cliquez sur "Administration" et "Marketplace" , et installer le plugin "SonarJAVA" :
+Cliquez sur "**Administration**" et "**Marketplace**" , et installer le plugin "SonarJava" :
 
 ![sonar-1](images/sonar-1.png)
 
@@ -167,20 +167,20 @@ Cliquez sur "Administration" et "Marketplace" , et installer le plugin "SonarJAV
 
 - Exemple d'ajout d'un projet Java (Maven ou Graddle) : 
 
-- Créer un nouveau projet, cliquer sur "Create new project": 
+- Créez un nouveau projet, cliquez sur "**Create new project**": 
 ![sonar-2](images/sonar-2.png)
 
 - Nommez votre projet : 
 ![sonar-3](images/sonar-3.png)
 
-- Gênerez un token, ajouter un nom et cliquer sur "Generate" : 
+- Générez un token, ajouter un nom et cliquer sur "**Generate**" : 
 
 ![sonar-4](images/sonar-4.png)
 
-- Sélectionner "Java" , puis "Maven ou Graddle" selon votre projet : 
+- Sélectionnez "**Java**" , puis "**Maven ou Graddle**" selon votre projet : 
 ![sonar-6](images/sonar-6.png)
 
-- Copier bien la commande  donner par SonarQube pour linker votre projet au SonarQube.
+- Copiez bien la commande  donner par SonarQube pour lier votre projet au SonarQube & Jenkins.
 ![sonar-7](images/sonar-7.png)
 
 Il vous suffira ensuite d'aller à la racine de votre projet Java avec un terminal et de lancer la commande copiée précédemment. Vous devriez avoir un message : 
@@ -208,35 +208,100 @@ Jenkins fournit des services d'intégration continue pour le développement de l
   - Directement dans votre explorateur de fichiers :
     - Allez à la racine du projet -> jenkins -> secrets -> initialAdminPassword
     ![jenkins-1](images/jenkins-1.png)
-- Ensuite, cliquez sur "Installer les plugins suggérés" et attendez la fin du processus
-- Vous pouvez maintenant créer votre compte d'administration et cliquer sur "Save and Continue
-- Laissez ensuite l'URL Jenkins suggérée et cliquez sur "Save and Finish". Pour permettre à Jenkins de communiquer avec GitLab et SonarQube, nous devons installer quelques plugins.
-- Cliquez sur "Manage Jenkins" et ensuite sur "Manage Plugin"
-- Ensuite, cliquez sur "Available" et recherchez GitLab et cochez la case GitLab plugin
-- Maintenant, recherchez "SonarQube Scanner" et cochez la case du plugin SonarQube Scanner, puis cliquez sur "Download now and install after restart".
-- 
+- Ensuite, cliquez sur "**Installer les plugins suggérés**" et attendez la fin du processus
+- Vous pouvez maintenant créer votre compte d'administration et cliquer sur "**Save and Continue**"
+- Laissez ensuite l'URL Jenkins suggérée et cliquez sur "**Save and Finish**". Pour permettre à Jenkins de communiquer avec GitLab et SonarQube, nous devons installer quelques plugins.
+
+**Configuration du plugin SonarQube**
+
+- Cliquez sur "**Manage Jenkins**" et ensuite sur "**Manage Plugin**"
+- Maintenant, recherchez "**SonarQube Scanner**" et cochez la case du plugin SonarQube Scanner, puis cliquez sur "**Download now and install after restart**".
 ![jankins-2](images/jenkins-2.png)
 
 
-- Ensuite cliquer sur "Restart Jenkins when installation is complete and no jobs are running"
+- Ensuite cliquer sur "**Restart Jenkins when installation is complete and no jobs are running**"
+- Attendez le redémarrage de Jenkins
 
+IMAGE ICI
 
-Maintenant, tous les plugins nécessaires sont installés mais ils ne sont pas configurés pour Gitlab et SonarQube.
+- Allez dans SonarQube (disponible à l'adresse suivante : localhost:9000)
+- Cliquez sur votre profil en haut à droite, puis "**My Account**"
+- Cliquez dans la section "**Security**"
+- Ajouter un nouveau Token et copier la clé secrète fournie par SonarQube
+- Retournez sur Jenkins
+- Pour la configuration de SonarQube allez dans "**Administrer Jenkins**" puis "**Configurer le système**"
+- Ajouter un serveur SonarQube avec la configuration suivante : 
+  - **Nom** : sonar-scanner
+  - **URL du serveur** : http://sonarqube:9000/
+  - Cliquez sur le bouton "**Ajouter**" du champ "**Server authentification token**"
+  - Ouvrez le champ "**Type**" et sélectionner "**Secret Text**"
+  - Dans le champ "**Secret**", entrez la clé secrète SonarQube précédemment copiée
+  - Dans le champ "**ID**", rentrez "**sonar-scanner-token**"
+  -  Laissez le champ "**Description**" vide
+  - Cliquez sur le bouton "**Ajouter**"
+  - Maintenant, sélectionner dans "**Server Authentification Token**" le token précédemment crée
 
-- Une fois que Jenkins est redémarré, allez à "Manage Jenkins", puis "Configure System"
-- Allez dans la section "SonarQube servers", cliquez sur "Add SonarQube" et ensuite, cochez "Enable injection of SonarQube server configuration...", donnez un nom au SonarQube et définissez l'url du serveur SonarQube : http://sonar:9000
+- Rendez-vous dans l'espace suivant : "**Administrer Jenkins** --> **Configuration globale des outils**"
+  - Dans la catégorie "**SonarQube Scanner**" cliquez sur "**Ajouter SonarQube Scanner**"
+  - Dans le champ "**Name**", écrire : "**sonar-scanner**"
+  - Cochez "**Install Automatically**"
+  - Cliquez sur "**Ajouter SonarQube Scanner**"
 
-- Pour le plugin Gitlab, si vous réalisez une CI classique, vous n'aurez pas besoin de le configurer, sinon vous pouvez retrouver de l'aide ici : https://docs.gitlab.com/ee/integration/jenkins.html
+L'installation et la configuration du SonarQube plugin est désormais terminée.
 
-- Appliquez et sauvez les changements
+**Installation et configuration du plugin Maven**
 
-- Maintenant, nous allons configurer Maven pour qu'il soit automatiquement installé sur le Docker Jenkins
-
-- Allez dans "Administrer Jenkins" puis "Configuration globale des outils"
-- Dans la section "Maven" cocher "Install Automatically"
-- Sélectionner "Download from Docker.com"
+-  Cliquez sur "**Manage Jenkins**" et ensuite sur "**Manage Plugin**"
+-  Recherchez et ajoutez le plugin "**Maven Integration Plugin**"
+-  Redémarrez Jenkins quand l'installation est terminée
+-  Allez dans "**Administrer Jenkins**" puis "**Configuration globale des outils**"
+- Dans la section "**Maven**" cocher **"Install Automatically**"
+- Sélectionner "**Download from Docker.com**"
 - Enregistrez et appliquez les changements
 
+Maven est désormais installé et ne nécessite pas plus de configuration
+ 
+## Ajouter une application Java à Jenkins
+
+- Rendez-vous à la page d'accueil de Jenkins
+- Cliquez sur "**New Item**"
+- Sélectionner "**Construire un projet Maven**"
+- Dans "**Nom**", saisissez un nom de projet
+- Cliquez sur le bouton "**Ok**"
+
+Votre build Jenkins est désormais créée.
+
+Nous allons maintenant configurer le build Jenkins
+
+- Dans la catégorie "**Gestion de code source**", ajoutez le lien vers votre repository Github (vous devrez ajouter des credentials si votre repository est privé)
+- Dans la catégorie "**Ce qui déclenche le build**", cochez "**Scrutation de l'outils de gestions de version**"
+  - Dans "**Planning**", rentrez une valeur pour que Jenkins aille scruter votre repository toutes les X minutes (* * * * * = toutes les minutes)
+- Dans la catégorie "**Post Step**", sélectionner "**Lancer une analyse avec SonarQube Scanner**"
+  - Dans "**Propriétés de l'analyse**", ajoutez le code suivant, en modifiant pour votre projet :
+```sonar.projectKey=dadCooking-front
+sonar.projectKey=project_name 
+(remplacez par le nom de votre projet)
+sonar.sources=src/main
+sonar.sourceEncoding=UTF-8
+sonar.language=java
+sonar.tests=src/test
+sonar.junit.reportsPath=target/surefire-reports
+sonar.surefire.reportsPath=target/surefire-reports
+sonar.jacoco.reportPath=target/jacoco.exec
+sonar.java.binaries=target/classes
+sonar.java.coveragePlugin=jacoco
+```
+
+- Enregistrer la configuration de votre build
+
+Votre build est maintenant configuré.
+
+Voici la liste des étapes de votre build : 
+- Maven Build
+- Maven TestUI
+- Génération des rapports de test
+- Génération des artefacts JAR
+- Analyse du code SonarQube 
  
 ##  Maintenir son environnement
 
