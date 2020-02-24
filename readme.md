@@ -331,7 +331,11 @@ sonar.java.coveragePlugin=jacoco
 
 Votre build est maintenant configuré.
 
-Si vous le lancer vous devriez avoir :
+Si vous le lancer votre pipeline :
+
+![launch-jenkins-build](images/launch-jenkins-build.png)
+
+Vous devriez avoir :
 
 ![jenkins-jobs-finish](images/jenkins-jobs-finish.png)
 
