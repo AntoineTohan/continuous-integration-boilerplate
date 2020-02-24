@@ -274,6 +274,9 @@ L'installation et la configuration du SonarQube plugin est désormais terminée.
 
 -  Cliquez sur "**Manage Jenkins**" et ensuite sur "**Manage Plugin**"
 -  Recherchez et ajoutez le plugin "**Maven Integration Plugin**"
+
+![maven-integration-plugin](images/maven-integration-plugin.png)
+
 -  Redémarrez Jenkins quand l'installation est terminée
 -  Allez dans "**Administrer Jenkins**" puis "**Configuration globale des outils**"
 - Dans la section "**Maven**" cocher **"Install Automatically**"
@@ -292,14 +295,21 @@ Maven est désormais installé et ne nécessite pas plus de configuration
 - Dans "**Nom**", saisissez un nom de projet
 - Cliquez sur le bouton "**Ok**"
 
+![jenkins-create-jobs](images/jenkins-create-jobs.png)
+
 Votre build Jenkins est désormais créée.
 
 Nous allons maintenant configurer le build Jenkins
 
 - Dans la catégorie "**Gestion de code source**", ajoutez le lien vers votre repository Github (vous devrez ajouter des credentials si votre repository est privé)
 - Dans la catégorie "**Ce qui déclenche le build**", cochez "**Scrutation de l'outils de gestions de version**"
+  - Cocher l'option "**Lance un build à chaque fois qu'une dépendance SNAPSHOT est construite**" 
   - Dans "**Planning**", rentrez une valeur pour que Jenkins aille scruter votre repository toutes les X minutes (* * * * * = toutes les minutes)
+
+![jenkins-conf-1](images/jenkins-conf-1.png)
+
 - Dans la catégorie "**Post Step**", sélectionner "**Lancer une analyse avec SonarQube Scanner**"
+  - Cocher l'option "**Run only if build succeeds**"
   - Dans "**Propriétés de l'analyse**", ajoutez le code suivant, en modifiant pour votre projet :
 ```sonar.projectKey=dadCooking-front
 sonar.projectKey=project_name 
@@ -314,6 +324,8 @@ sonar.jacoco.reportPath=target/jacoco.exec
 sonar.java.binaries=target/classes
 sonar.java.coveragePlugin=jacoco
 ```
+
+![jenkins-conf-1](images/jenkins-conf-2.png)
 
 - Enregistrer la configuration de votre build
 
