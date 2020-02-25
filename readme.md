@@ -140,7 +140,7 @@ Liste des containers créée :
 
 **Qu'est ce que Gitlab ?**
 
-GitLab est un logiciel libre de forge basé sur git proposant les fonctionnalités de wiki, un système de suivi des bugs, l’intégration continue et la livraison continue.
+GitLab est un logiciel libre basé sur git proposant les fonctionnalités de wiki, un système de suivi des bugs, l’intégration continue et la livraison continue.
 
 - Accès à l'interface web de gitlab à l'adresse suivante : http://localhost:8081
 
@@ -191,7 +191,7 @@ Cliquez sur "**Administration**" et "**Marketplace**" , et installer le plugin "
 - Sélectionnez "**Java**" , puis "**Maven ou Graddle**" selon votre projet : 
 ![sonar-6](images/sonar-6.png)
 
-- Copiez bien la commande  donner par SonarQube pour lier votre projet au SonarQube & Jenkins.
+- Copiez bien la commande  donner par SonarQube pour lier votre projet au SonarQube.
 ![sonar-7](images/sonar-7.png)
 
 Il vous suffira ensuite d'aller à la racine de votre projet Java avec un terminal et de lancer la commande copiée précédemment. Vous devriez avoir un message : 
@@ -359,6 +359,9 @@ Naviguez avec votre terminal jusqu'au dossier cloner depuis github :
 
 Vous pouvez maintenant mettre en pause les containers avec  :
 ``` docker-compose stop```
+
+Et vous pouvez redémarrer les containers avec :
+``` docker-compose start```
 
 Vous pouvez maintenant supprimer tous les services avec le Docker-compose :
 ***Attention la suppression vous fera perdre toute votre configuration***
